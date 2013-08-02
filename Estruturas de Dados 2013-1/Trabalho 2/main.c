@@ -169,6 +169,7 @@ void LimpaLista(m_Lista *lista)
             free(aux2);
     }
     lista->first = lista->last = NULL;
+    lista->count = 0;
 }
 void InsereLista(m_Lista *lista, int novo)
 {
