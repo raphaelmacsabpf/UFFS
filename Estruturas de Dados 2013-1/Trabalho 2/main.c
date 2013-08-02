@@ -55,6 +55,14 @@ void MenuLista(m_Lista *lista)
     {
         ImprimeLista(lista);
     }
+    else if(escolha == 5)
+    {
+        InsertionSort(lista);
+    }
+    else if(escolha == 6)
+    {
+        QuickSort(lista);
+    }
     MenuLista(lista);
 }
 void ImprimeLista(m_Lista * lista)
@@ -148,25 +156,19 @@ void RemoveLista(m_Lista *lista,int id)
 }
 void LimpaLista(m_Lista *lista)
 {
-    printf("---Imprimindo Lista---\n\n");
     m_Nodo * aux = lista->first;
+    m_Nodo * aux2;
     if(aux == NULL)
     {
         printf("Lista Vazia\n");
     }
-    for(aux = lista->first; aux != NULL; aux = aux->next)
+    while(aux != NULL)
     {
-        printf("Elemento = %d\n\n",aux->info);
-        if(ProcurarExistencia(lista,aux->info))
-        {
-            RemoveLista(lista, aux->info);
-        }
-        else
-        {
-            continue;
-        }
+            aux2 = aux;
+            aux = aux->next;
+            free(aux2);
     }
-    printf("----------------------\n");
+    lista->first = lista->last = NULL;
 }
 void InsereLista(m_Lista *lista, int novo)
 {
@@ -193,4 +195,12 @@ void InsereLista(m_Lista *lista, int novo)
         aux->next->previous = aux;
         lista->count++;
     }
+}
+void InsertionSort(m_Lista *lista)
+{
+    printf("Insertion Sort\n");
+}
+void QuickSort(m_Lista *lista)
+{
+    printf("Quick Sort\n");
 }
