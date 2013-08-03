@@ -199,9 +199,41 @@ void InsereLista(m_Lista *lista, int novo)
 }
 void InsertionSort(m_Lista *lista)
 {
-    printf("Insertion Sort\n");
+
+    printf("----Insertion Sort----\n");
+    int i;
+    m_Nodo *aux;
+    m_Nodo *anterior = aux;
+    for(i = 0, aux = lista->first; i < lista->count; i++, anterior = aux,aux = aux->next)
+    {
+        //printf("Anterior: %d\nAtual: %d\n\n",anterior->info,aux->info);
+        while((i != 0) && (aux->info < anterior->info)) {
+
+                        Swap(anterior,aux);
+                        aux = anterior;
+                        printf("Anterior: %d\nAtual: %d\n\n",anterior->info,aux->info);
+                        i--;
+        }
+    }
+    return lista;
+}
+void Swap(m_Nodo *nodo1, m_Nodo *nodo2)
+{
+    int aux = nodo1->info;
+    nodo1->info = nodo2->info;
+    nodo2->info = aux;
 }
 void QuickSort(m_Lista *lista)
 {
     printf("Quick Sort\n");
+    m_Nodo *a = (m_Nodo*)UltimoNodo(lista);
+    printf("%d\n\n\n\n",a->info);
+}
+void UltimoNodo(m_Nodo *root)
+{
+    while (root && root->next)
+    {
+       root = root->next;
+    }
+    return root;
 }
