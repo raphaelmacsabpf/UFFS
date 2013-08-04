@@ -12,7 +12,9 @@ typedef struct {
     m_Nodo *last;
     int count;
 }m_Lista; //Estrutura da lista ligada.
-
+m_Nodo *QuickSort(m_Lista *lista, m_Nodo *left, m_Nodo *right);
+m_Nodo *partition(m_Lista *lista, m_Nodo *left, m_Nodo *right, m_Nodo *pivot);
+m_Nodo *GetNodoByIndex(m_Lista *lista, int index);
 void main()
 {
     m_Lista lista;
@@ -61,7 +63,7 @@ void MenuLista(m_Lista *lista)
     }
     else if(escolha == 6)
     {
-        QuickSort(lista);
+        lista = QuickSort(lista,lista->first, lista->last);
     }
     MenuLista(lista);
 }
@@ -199,41 +201,123 @@ void InsereLista(m_Lista *lista, int novo)
 }
 void InsertionSort(m_Lista *lista)
 {
-
     printf("----Insertion Sort----\n");
-    int i;
+    int i,j;
     m_Nodo *aux;
     m_Nodo *anterior = aux;
-    for(i = 0, aux = lista->first; i < lista->count; i++, anterior = aux,aux = aux->next)
+    for(j = 0; j < lista->count; j++)
     {
-        //printf("Anterior: %d\nAtual: %d\n\n",anterior->info,aux->info);
-        while((i != 0) && (aux->info < anterior->info)) {
-
-                        Swap(anterior,aux);
-                        aux = anterior;
-                        printf("Anterior: %d\nAtual: %d\n\n",anterior->info,aux->info);
-                        i--;
+        for(i = 0, aux = lista->first; i < lista->count; i++, anterior = aux,aux = aux->next)
+        {
+            while((i != 0) && (aux->info < anterior->info))
+            {
+                SwapNodos(lista,anterior,aux);
+                aux = anterior;
+            }
         }
     }
+}
+m_Nodo *QuickSort(m_Lista *lista, m_Nodo *left, m_Nodo *right)
+{
+    printf("DEBUG0\n");
+    if(GetIndex(lista, left) < GetIndex(lista,right))
+    {
+        m_Nodo *pivot = GetNodoByIndex(lista, lista->count / 2);
+        printf("%d   %d",GetIndex(lista, left),GetIndex(lista, right));
+        m_Nodo *q = partition(lista, left, right,pivot);
+        printf("DEBUG2\n");
+		QuickSort(lista, left, q->previous);
+		printf("DEBUG3\n");
+		QuickSort(lista, q->next, right);
+		printf("DEBUG4\n");
+    }
+    printf("DEBUG5\n");
     return lista;
 }
-void Swap(m_Nodo *nodo1, m_Nodo *nodo2)
+m_Nodo *partition(m_Lista *lista, m_Nodo *left, m_Nodo *right, m_Nodo *pivot)
+{
+    m_Nodo *pos, *i;
+    SwapNodos(lista,pivot, right);
+    pos = left;
+    for(i = left; GetIndex(lista, i) < GetIndex(lista, right); i = i->next)
+    {
+        if(i->info < right->info)
+        {
+            SwapNodos(lista, i, pos);
+            pos = pos->next;
+        }
+    }
+    SwapNodos(lista, right,pos);
+    return pos;
+}
+/*
+m_Nodo *partition(m_Lista *nLista, m_Nodo *p, m_Nodo *r)
+{
+	if (p == NULL || r == NULL || nLista == NULL) return NULL;
+
+	m_Nodo *i = p->previous, *j = p;
+	int x = r->info, aux;
+	while((j->next != NULL) && (j != r) && (p->next!=NULL)){
+		if(j->info <= x){
+			i = p;
+			aux = i->info;
+			i->info = j->info;
+			j->info = aux;
+			p = p->next;
+		}
+		j = j->next;
+	}
+	if((i == NULL && p->previous==NULL)||(i->previous == NULL)){		// Pivô menor que todos || lista andou somente uma posição
+		aux = p->info;
+		p->info = x;
+		r->info = aux;
+		return p;
+	}
+	aux = i->next->info;
+	i->next->info = x;
+	r->info = aux;
+	return i->next;
+}*/
+
+void swap(m_Nodo *nodo1, m_Nodo *nodo2)
 {
     int aux = nodo1->info;
     nodo1->info = nodo2->info;
     nodo2->info = aux;
 }
-void QuickSort(m_Lista *lista)
+void SwapNodos(m_Lista *lista, m_Nodo *left, m_Nodo *right)
 {
-    printf("Quick Sort\n");
-    m_Nodo *a = (m_Nodo*)UltimoNodo(lista);
-    printf("%d\n\n\n\n",a->info);
+	left->next = right->next;
+	right->previous = left->previous;
+	if(left->next != NULL)
+		left->next->previous = left;
+	else
+		lista->last = left;
+	if(right->previous != NULL)
+		right->previous->next = right;
+	else
+		lista->first = right;
+	left->previous = right;
+	right->next = left;
 }
-void UltimoNodo(m_Nodo *root)
+int GetIndex(m_Lista *lista, m_Nodo *nodo)
 {
-    while (root && root->next)
+    int i;
+    m_Nodo *aux;
+    for(i = 0, aux = lista->first; aux != nodo; i++)
     {
-       root = root->next;
+         aux = aux->next;
     }
-    return root;
+    return i;
+}
+m_Nodo *GetNodoByIndex(m_Lista *lista, int index)
+{
+    m_Nodo *aux;
+    int i;
+    for(i = 0, aux = lista->first; aux != NULL; aux = aux->next, i++)
+    {
+        if(i == index)
+            return aux;
+    }
+    return NULL;
 }
