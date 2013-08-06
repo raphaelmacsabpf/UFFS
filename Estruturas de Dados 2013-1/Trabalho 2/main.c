@@ -1,3 +1,9 @@
+/*---------------------------------------------------
+-----------------------------------------------------
+----Trabalho feito por Raphael Machado dos Santos----
+----E-mail: raphaelmacsa@gmail.com-------------------
+-----------------------------------------------------
+---------------------------------------------------*/
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,12 +20,9 @@ typedef struct {
 }m_Lista; //Estrutura da lista ligada.
 
 //Prototipos
-void QuickSort(m_Lista *lista, int start, int end);
-int RepartirLista(m_Lista *lista, int left, int right);
 m_Nodo *GetNodoByIndex(m_Lista *lista, int index);
 void MenuLista(m_Lista *lista);
 void ImprimeLista(m_Lista * lista);
-void ImprimeListaAoContrario(m_Lista * lista);
 void RemoveLista(m_Lista *lista,int id);
 void LimpaLista(m_Lista *lista);
 void InsereLista(m_Lista *lista, int novo);
@@ -27,7 +30,6 @@ void InsertionSort(m_Lista *lista);
 void QuickSort(m_Lista *lista, int start, int end);
 int RepartirLista(m_Lista *lista, int left, int right);
 void Swap(m_Nodo *nodo1, m_Nodo *nodo2);
-int GetIndex(m_Lista *lista, m_Nodo *nodo);
 m_Nodo *GetNodoByIndex(m_Lista *lista, int index);
 int GetNodoInfoByIndex(m_Lista *lista, int index);
 
@@ -76,10 +78,12 @@ void MenuLista(m_Lista *lista)
     }
     else if(escolha == 5)
     {
+        printf("----Insertion Sort----\n");
         InsertionSort(lista);
     }
     else if(escolha == 6)
     {
+        printf("----Quick Sort----\n");
         QuickSort(lista,0, (lista->count)-1);
     }
     MenuLista(lista);
@@ -93,20 +97,6 @@ void ImprimeLista(m_Lista * lista)
         printf("Lista Vazia\n");
     }
     for(aux = lista->first; aux != NULL; aux = aux->next)
-    {
-        printf("Elemento = %d\n\n",aux->info);
-    }
-    printf("----------------------\n");
-}
-void ImprimeListaAoContrario(m_Lista * lista)
-{
-    printf("---Imprimindo Lista Ao Contrario---\n\n");
-    m_Nodo * aux = lista->last;
-    if(aux == NULL)
-    {
-        printf("Lista Vazia\n");
-    }
-    for(aux = lista->last; aux != NULL; aux = aux->previous)
     {
         printf("Elemento = %d\n\n",aux->info);
     }
@@ -218,22 +208,22 @@ void InsereLista(m_Lista *lista, int novo)
 }
 void InsertionSort(m_Lista *lista)
 {
-    printf("----Insertion Sort----\n");
     int i;
-    for(i = 1; i < lista->count; i++)
+    m_Nodo *aux = lista->first;
+    for(i = 0; aux != NULL; i++, aux = aux->next)
     {
-        while((i != 0) &&(GetNodoInfoByIndex(lista,i) < GetNodoInfoByIndex(lista,i-1)))
+        while((i != 0) &&(aux->info < aux->previous->info))
         {
             m_Nodo *nodo1 = GetNodoByIndex(lista,i);
             m_Nodo *nodo2 = GetNodoByIndex(lista,i-1);
-            Swap(nodo1,nodo2);
+            Swap(aux,aux->previous);
             i--;
+            aux = aux->previous;
         }
     }
 }
 void QuickSort(m_Lista *lista, int start, int end)
 {
-    printf("----Quick Sort----");
     int r;
     if(start < end)
     {
@@ -266,16 +256,6 @@ void Swap(m_Nodo *nodo1, m_Nodo *nodo2)
         nodo1->info = nodo2->info;
         nodo2->info = aux;
     }
-}
-int GetIndex(m_Lista *lista, m_Nodo *nodo)
-{
-    int i;
-    m_Nodo *aux;
-    for(i = 0, aux = lista->first; aux != nodo; i++)
-    {
-         aux = aux->next;
-    }
-    return i;
 }
 m_Nodo *GetNodoByIndex(m_Lista *lista, int index)
 {
