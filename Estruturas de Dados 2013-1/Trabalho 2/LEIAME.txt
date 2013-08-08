@@ -1,0 +1,3 @@
+Trabalho feito por Raphael Machado dos Santos
+A apresentação de funcionamento será feita quinta feira ao apresentar o trabalho
+para compilar use: gcc -o main main.c -Wall

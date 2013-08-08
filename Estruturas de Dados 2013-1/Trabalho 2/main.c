@@ -214,8 +214,6 @@ void InsertionSort(m_Lista *lista)
     {
         while((i != 0) &&(aux->info < aux->previous->info))
         {
-            m_Nodo *nodo1 = GetNodoByIndex(lista,i);
-            m_Nodo *nodo2 = GetNodoByIndex(lista,i-1);
             Swap(aux,aux->previous);
             i--;
             aux = aux->previous;
