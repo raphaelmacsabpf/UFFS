@@ -86,6 +86,10 @@ void MenuLista(m_Lista *lista)
         printf("----Quick Sort----\n");
         QuickSort(lista,0, (lista->count)-1);
     }
+    else if(escolha == 7)
+    {
+        BubbleSort(lista);
+    }
     MenuLista(lista);
 }
 void ImprimeLista(m_Lista * lista)
@@ -217,6 +221,43 @@ void InsertionSort(m_Lista *lista)
             Swap(aux,aux->previous);
             i--;
             aux = aux->previous;
+        }
+    }
+}
+void SelectionSort(m_Lista *lista)
+{
+    m_Nodo *aux, *aux2, *min;
+    for(aux = lista->first; aux != NULL; aux = aux->next)
+    {
+        min = aux;
+        if(aux->next != NULL)
+        {
+            for(aux2 = aux->next; aux2 != NULL; aux2 = aux2->next)
+            {
+                if(aux2->info < min->info)
+                {
+                    min = aux2;
+                }
+            }
+            if(min != aux)
+                Swap(min, aux);
+        }
+    }
+}
+void BubbleSort(m_Lista *lista)
+{
+    m_Nodo *aux, *aux2, *ultimoordenado = lista->first;
+    for(aux = lista->first; aux != NULL; aux = aux->next)
+    {
+        if(aux->next != NULL)
+        {
+            for(aux2 = aux->next; aux2 != NULL; aux2 = aux2->next)
+            {
+                if(aux2->info < aux->info)
+                {
+                    Swap(aux, aux2);
+                }
+            }
         }
     }
 }
