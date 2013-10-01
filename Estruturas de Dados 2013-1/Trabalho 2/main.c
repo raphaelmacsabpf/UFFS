@@ -88,7 +88,7 @@ void MenuLista(m_Lista *lista)
     }
     else if(escolha == 7)
     {
-        newSelectionSort(lista);
+        BubbleSort(lista);
     }
     MenuLista(lista);
 }
@@ -247,6 +247,7 @@ void SelectionSort(m_Lista *lista)
 void BubbleSort(m_Lista *lista)
 {
     m_Nodo *aux, *aux2;
+    int temp;
     for(aux = lista->first; aux != NULL; aux = aux->next)
     {
         if(aux->next != NULL)
@@ -255,7 +256,9 @@ void BubbleSort(m_Lista *lista)
             {
                 if(aux2->info < aux->info)
                 {
-                    Swap(aux, aux2);
+                    temp = aux2->info;
+                    aux2->info = aux->info;
+                    aux->info = temp;
                 }
             }
         }
