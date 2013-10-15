@@ -20,12 +20,12 @@ package
 			direcaoY = 1;
 	
 			
-			b = new FlxButton(240, 220, "Atirar", processaTiro);
-			FlxG.mouse.show();
+			/*b = new FlxButton(240, 220, "Atirar", processaTiro);
+			FlxG.mouse.show();*/
 
 			
 			add(c);
-			add(b);
+			//add(b);
 		}
 		override public function update(): void {
 			if(c.x+30 >= 320)
@@ -55,13 +55,13 @@ package
 			add(tiro);
 			super.update();
 		}
-		public function processaTiro():void {
+		/*public function processaTiro():void {
 			tiro = new Coisa(new FlxPoint(3, 3));
 			tiro.x = c.x;
 			tiro.y = c.y;
 			add(tiro);
 			FlxG.log("Atirou");
-		}
+		}*/
 		/*public function sair() :void {
 			var t :FlxText;
 			var a :FlxText;
