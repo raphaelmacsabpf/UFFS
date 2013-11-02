@@ -21,7 +21,7 @@ package
 			this.sentido = 1;
 			this.control = 0;
 			this.mousePos = 0;
-			this.play("ToRight");
+			this.play("toRight");
 		}
 		override public function update():void
 		{
