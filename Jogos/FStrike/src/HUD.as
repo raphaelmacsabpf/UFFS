@@ -12,8 +12,6 @@ package
 		{
 			loadGraphic(ASSET_HUD, false, false, 640, 48);
 			this.y = FlxG.height - 52;
-			this.frameHeight = 1;
-			this.frameHeight = 1;
 		}
 		
 	}

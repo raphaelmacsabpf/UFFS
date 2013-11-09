@@ -16,12 +16,21 @@ package
 			loadGraphic(ASSET_CHARACTER, true, false, 206, 148);
 			addAnimation("toRight", [0]);
 			addAnimation("toLeft", [1]);
+			addAnimation("fireToLeft", [0, 2, 4, 6, 8,6,4,2,0], 120,false);
+			addAnimation("fireToRight", [1, 3, 5, 7, 9,7,5,3,1], 120,false);
 			this.x = (FlxG.width/2)-206;
 			this.y = FlxG.height - 148;
 			this.sentido = 1;
 			this.control = 0;
 			this.mousePos = 0;
 			this.play("toRight");
+		}
+		public function animShoot():void
+		{
+			if (mousePos == 0)
+				this.play("fireToLeft");
+			else
+				this.play("fireToRight");
 		}
 		override public function update():void
 		{

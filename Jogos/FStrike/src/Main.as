@@ -5,7 +5,7 @@ package
 	public class Main extends FlxGame 
 	{
 		public function Main() {
-			super(640, 480, GameState,1,120,120);
+			super(640, 480, GameState,1,60,60);
 			forceDebugger = true;
 		}
 	}

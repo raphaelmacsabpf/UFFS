@@ -1,6 +1,7 @@
 package  
 {
 	import org.flixel.*;
+	import org.flixel.plugin.photonstorm.*;
 	/**
 	 * ...
 	 * @author Raphael Machado dos Santos
@@ -16,16 +17,30 @@ package
 		public var healthText:FlxText;
 		public var ammoText:FlxText;
 		public var player1:Player;
-		public var camera:FlxCamera;
+		public var hudGroup:FlxGroup;
+		public var enemyGroup:FlxGroup;
+		public var mapGroup:FlxGroup;
+		public var worldGroup:FlxGroup;
+		public var shootGroup:FlxGroup;
+		public var MAX_ENEMIES:uint;
 		
-		
+		[Embed(source = "assets/blood.png")] public var ASSET_BLOOD1:Class;
 		override public function create():void
 		{
-			world = new World();
+			hudGroup = new FlxGroup();
+			enemyGroup = new FlxGroup();
+			mapGroup = new FlxGroup();
+			worldGroup = new FlxGroup();
+			shootGroup = new FlxGroup();	
+			
+			world = new World(1,1);
 			character = new Character();
 			sight = new Sight();
 			hud = new HUD();
 			player1 = new Player();
+		
+			
+			
 			
 			var strHealth = "" + player1.health;
 			healthText = new FlxText(10, FlxG.height - 46, 60, strHealth);
@@ -36,21 +51,85 @@ package
 			ammoText = new FlxText(FlxG.width-115, FlxG.height - 46, 90, strAmmo);
 			ammoText.size = 28;
 			ammoText.alignment = "center";
+			hudGroup.add(hud);
+			hudGroup.add(sight);
+			hudGroup.add(sight.center);
+			hudGroup.add(healthText);
+			hudGroup.add(ammoText);
+			worldGroup.add(world);
 			
-			add(world);
+			
+			
+			add(worldGroup);
+			add(enemyGroup);
+			add(mapGroup);
+			add(shootGroup);
 			add(character);
-			add(sight);
-			add(hud);
-			add(healthText);
-			add(ammoText);
+			add(hudGroup);
 			
+			
+			mapGroup.add(new MapObj(0, 0,1));
+			mapGroup.add(new MapObj( -50, 0,1));
+			mapGroup.add(new MapObj( -100, 0, 1));
+			mapGroup.add(new MapObj(0, 0,2));
+			
+			enemyGroup.add(new Enemy(new FlxPoint(300, 210), "size4", true,0));
+			enemyGroup.add(new Enemy(new FlxPoint(350, 210), "size4", true,0));
+			enemyGroup.add(new Enemy(new FlxPoint(224, 232), "size4", true, 2));
+			enemyGroup.add(new Enemy(new FlxPoint(300, 210), "size4", true,0));
+			enemyGroup.add(new Enemy(new FlxPoint(350, 210), "size4", true,0));
+			enemyGroup.add(new Enemy(new FlxPoint(224, 232), "size4", true, 2));
+			enemyGroup.add(new Enemy(new FlxPoint(300, 210), "size4", true,0));
+			enemyGroup.add(new Enemy(new FlxPoint(350, 210), "size4", true,0));
+			enemyGroup.add(new Enemy(new FlxPoint(224, 232), "size4", true, 2));
+			enemyGroup.add(new Enemy(new FlxPoint(300, 210), "size4", true,0));
+			enemyGroup.add(new Enemy(new FlxPoint(350, 210), "size4", true,0));
+			enemyGroup.add(new Enemy(new FlxPoint(224, 232), "size4", true,2));
+		
 			super.create();
+		}
+		public function damageEnemy(enemy:Enemy):void
+		{
+			if (enemy.health - 30 < 1)
+				player1.points ++;
+			enemy.hurt(30);
+			FlxG.log("Health = " + enemy.health);
 		}
 		private function weaponShoot()
 		{
+			FlxG.log("X = " + FlxG.mouse.x + ", Y = " + FlxG.mouse.y);
 			FlxG.play(gunfire);
 			player1.ammo --;
 			ammoUpdate();
+			character.animShoot();
+			shootGroup.add(new WeaponExplosion(character));
+			
+			var mapobjs :Array = mapGroup.members;
+			var isProtected:Boolean = false;
+			for (var i:int = 0; i < mapGroup.length; i++) {
+				var mapobj :MapObj = mapobjs[i];
+				
+				if (mapobj != null && mapobj.alive && FlxCollision.pixelPerfectCheck(sight.center, mapobj))
+				{
+					isProtected = true;
+					break;
+				}
+			}
+			
+			if (isProtected == false)
+			{
+				var enemies :Array = enemyGroup.members;
+				for (var i:int = 0; i < enemies.length; i++) {
+					var enemy :Enemy = enemies[i];
+					
+					if (enemy != null && enemy.alive && FlxCollision.pixelPerfectCheck(sight.center, enemy))
+					{
+						damageEnemy(enemy);
+						break;
+					}
+				}
+			}
+			FlxG.log("    " + player1.points);
 		}
 		private function weaponReload()
 		{
@@ -79,6 +158,7 @@ package
 		}
 		override public function update():void
 		{
+			//FlxG.log("X=" + FlxG.mouse.x + ", Y=" + FlxG.mouse.y);
 			if (player1.isReloading)
 			{
 				player1.reloadingCounter += FlxG.elapsed;
@@ -88,7 +168,7 @@ package
 					player1.isReloading = 0;
 				}
 			}
-			if (FlxG.mouse.justPressed())
+			if (FlxG.mouse.pressed())
 			{
 				if (!player1.isReloading)
 				{
