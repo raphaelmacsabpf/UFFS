@@ -11,7 +11,7 @@ CREATE DATABASE NOME_BANCO;
  
 Se conectar a outro banco:
 \c NOME_BANCO
- 
+ insert into aluno values (121010,'John', '02-03-1989');
 Exercícios Marina:
 1. Retornar os nomes e a DATA de nascimento de todos os velejadores.
 SELECT nome,dtnasc FROM velejador;
@@ -23,3 +23,51 @@ SELECT nome,descr FROM velejador JOIN classe ON velejador.classe = classe.cod;
 SELECT nome,tam FROM barco WHERE cor = 'azul';
  
 4. Retornar dados dos velejadores e barcos que tiveram duração das reservas superiores a 20 horas.
+
+
+
+//CÓDIGOS DA AULA 12/12/2013
+
+create table aluno
+(
+        mat integer not null,
+        nome varchar(50) not null,
+        dtnasc date not null,
+        constraint pk_aluno primary key(mat)
+);
+
+create table curso
+(
+        codigo integer not null,
+        nome varchar(30) not null,
+        constraint pk_curso primary key(codigo)
+);
+
+create table disciplina
+(
+        cod integer not null,
+        descr varchar(30) not null,
+        cr integer not null,
+        codc integer not null
+);
+
+create table disciplina
+(
+        cod integer not null,
+        descr varchar(30) not null,
+        cr integer not null,
+        codc integer not null,
+        constraint pk_disciplina primary key(cod),
+        constraint fk_disciplina foreign key (codc) references curso(codigo)
+);
+
+create table matricula
+(
+        mat integer not null,
+        codd integer not null,
+        sem integer not null,
+        med numeric(4,2),
+        constraint pk_matricula primary key(mat,codd,sem),
+        constraint fk_matricula foreign key(mat) references aluno(mat),
+        constraint fk_matricula2 foreign key(codd) references disciplina(cod)
+);
