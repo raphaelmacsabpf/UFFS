@@ -1,0 +1,25 @@
+Anotações de aula BD I - 06/12/2013
+ 
+Conexão:
+psql -U postgres -d BANCO  -h localhost;
+ 
+Mostrar tabelas:
+\dt
+ 
+Criar novo banco de dados:
+CREATE DATABASE NOME_BANCO;
+ 
+Se conectar a outro banco:
+\c NOME_BANCO
+ 
+Exercícios Marina:
+1. Retornar os nomes e a DATA de nascimento de todos os velejadores.
+SELECT nome,dtnasc FROM velejador;
+ 
+2. Retornar os nomes e a descrição da classe de todos os velejadores.
+SELECT nome,descr FROM velejador JOIN classe ON velejador.classe = classe.cod;
+ 
+3. Retornar os nomes e os tamanhos dos barcos de cor azul (Blue).
+SELECT nome,tam FROM barco WHERE cor = 'azul';
+ 
+4. Retornar dados dos velejadores e barcos que tiveram duração das reservas superiores a 20 horas.
