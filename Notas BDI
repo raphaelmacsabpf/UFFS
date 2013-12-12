@@ -46,7 +46,7 @@ create table curso
 create table disciplina
 (
         cod integer not null,
-        descr varchar(30) not null,
+        descr varchar(30) not null,
         cr integer not null,
         codc integer not null
 );
@@ -78,6 +78,9 @@ select a.nome,count(codd) from aluno a left join matricula m on a.mat = m.mat gr
 
 Nome da disciplina que não possui matrícula:
 select descr from disciplina d left join matricula m on d.cod = m.codd where m.mat IS NULL;
+select descr from disciplina where cod in (select codd from matricula);
+select descr from disciplina except select d.descr from disciplina d join matricula m on d.cod = m.codd;
+select d.descr from disciplina d where not exists (select * from matricula where codd = d.cod);
 
 Maior média cadastrada:
 select max(med) from matricula;
