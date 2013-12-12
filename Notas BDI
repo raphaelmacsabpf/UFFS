@@ -55,7 +55,7 @@ create table disciplina
 (
         cod integer not null,
         descr varchar(30) not null,
-        cr integer not null,
+        cr integer not null,select avg(med),descr from matricula join disciplina on matricula.codd = disciplina.cod group by mat,descr;
         codc integer not null,
         constraint pk_disciplina primary key(cod),
         constraint fk_disciplina foreign key (codc) references curso(codigo)
@@ -71,3 +71,25 @@ create table matricula
         constraint fk_matricula foreign key(mat) references aluno(mat),
         constraint fk_matricula2 foreign key(codd) references disciplina(cod)
 );
+
+//Exercícios 12/12/2013
+Nome do aluno e quantidade d edisciplina matriculada:
+select a.nome,count(codd) from aluno a left join matricula m on a.mat = m.mat group by a.mat;
+
+Nome da disciplina que não possui matrícula:
+select descr from disciplina d left join matricula m on d.cod = m.codd where m.mat IS NULL;
+
+Maior média cadastrada:
+select max(med) from matricula;
+
+nome do aluno com a maior média:
+select nome from matricula natural join aluno where med = (select max(med) from matricula);
+
+média geral das disciplinas:
+select avg(med) from matricula;
+
+média geral por disciplina:
+select avg(med),descr from matricula join disciplina on matricula.codd = disciplina.cod group by mat,descr;
+
+
+
