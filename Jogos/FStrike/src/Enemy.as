@@ -1,18 +1,21 @@
 package  
 {
-	import org.flixel.FlxPoint;
-	import org.flixel.FlxSprite;
+	import org.flixel.*;
 	/**
 	 * ...
 	 * @author Raphael Machado dos Santos
 	 */
 	public class Enemy extends FlxSprite
 	{
-		[Embed(source = "assets/enemy.png")] public var ASSET_ENEMY1:Class;
+		[Embed(source = "assets/saymon.png")] public var ASSET_ENEMY1:Class;
 		[Embed(source = "assets/enemytop.png")] public var ASSET_ENEMYTOP:Class;
 		[Embed(source = "assets/enemyleft.png")] public var ASSET_ENEMYLEFT:Class;
 		[Embed(source = "assets/enemyright.png")] public var ASSET_ENEMYRIGHT:Class;
+		[Embed(source = "assets/enemyGunFire.mp3", mimeType = "audio/mpeg")] public var enemyGunFire:Class;
+		[Embed(source ="assets/enemyGunFire2.mp3", mimeType = "audio/mpeg")] public var enemyGunFire2:Class;
 		private var health:int;
+		private var time:Number;
+		private var difficulty:uint;
 		/*
 		0 = BOTTON
 		1 = TOP
@@ -20,11 +23,13 @@ package
 		3 = RIGHT
 		*/
 		
-		public function Enemy(p:FlxPoint,size:String,visible:Boolean,angle:uint) 
+		public function Enemy(e:EnemySpawnPoint,difficulty:uint = 50) 
 		{
-			if (angle == 0 || angle == 3)
+			this.difficulty = difficulty;
+			this.time = 0.0;
+			if (e.angle == 0 || e.angle == 3)
 			{
-				if(angle == 0)
+				if(e.angle == 0)
 					loadGraphic(ASSET_ENEMY1, true, false, 123, 121);
 				else
 					loadGraphic(ASSET_ENEMYRIGHT, true, false, 125, 121);
@@ -38,7 +43,7 @@ package
 			}
 			else
 			{
-				if(angle == 1)
+				if(e.angle == 1)
 					loadGraphic(ASSET_ENEMYTOP, true, false, 121, 123);
 				else
 					loadGraphic(ASSET_ENEMYLEFT, true, false, 125, 121);
@@ -50,31 +55,49 @@ package
 				addAnimation("size2", [1]);
 				addAnimation("size1", [0]);
 			}
-			if(visible == true)
-				play(size);
-			else
-			{
-				this.visible = false;
-			}
 			//this.scale = new FlxPoint(0.3, 0.3);
-			if (angle == 0)
+			if (e.angle == 0)
 			{
-				this.x = p.x;
-				this.y = p.y;
+				this.x = e.point.x;
+				this.y = e.point.y;
 			}
-			else if (angle == 2)
+			else if (e.angle == 2)
 			{
-				this.x = p.x-60;
-				this.y = p.y;
+				this.x = e.point.x-60;
+				this.y = e.point.y;
 			}
 			this.hurt( -99);
+			play(e.size);
 			
 		}
-		public static function make(x:Number, y:Number):FlxPoint
+		public function attack():void
 		{
-			return new FlxPoint(x, y);
+			Map.player1.health --;
+			var volume:Number;
+			volume = FlxG.random();
+			if (volume < 0.5)
+				volume = 0.5;
+			var rand:Number = FlxG.random();
+			if(rand > 0.5)
+				FlxG.play(enemyGunFire, volume);
+			else
+				FlxG.play(enemyGunFire2, volume);
+			this.time = 0.0;
+			
 		}
-		
+		override public function update():void
+		{
+			super.update();
+			this.time += FlxG.elapsed;
+			if (this.time > (this.difficulty*FlxG.random()))
+				this.attack();
+
+		}
+		override public function kill():void
+		{
+			Map.player1.points ++;
+			super.kill();
+		}
 	}
 
 }
