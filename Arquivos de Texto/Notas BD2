@@ -1,0 +1,83 @@
+create [or replace] function <nome>
+		([<parameters>])
+			returns <tipo>
+as $<nome>$
+
+
+
+$<nome>$ language 'plpgsql';
+
+
+
+DECLARE = onde se declara as variáveis
+BEGIN
+END;
+DROP FUNCTION NOME(Parametros)
+
+
+DECLARE NOME TIPO
+	INTEGER
+	TEXT
+	VARCHAR(30)
+
+Exemplo de programinha
+
+
+CREATE FUNCTION USELESS() RETURNS VOID
+as $$
+DECLARE
+N INT;
+BEGIN
+N:=5;
+raise notice 'n=%', n;
+
+END
+$$
+LANGUAGE 'plpgsql';^C
+
+
+
+
+Para exibir mensagens na tela utiliza-se o comando RAISE
+							NOTICE
+							EXCEPTION
+
+Para fazer um laço (FOR), utiliza a seguinte sintaxe:
+
+FOR <var> IN <inicio> .. <fim> LOOP
+
+
+
+END LOOP;
+
+
+WHILE <condicao> LOOP
+
+END LOOP;
+
+O BREAK É: exit when(CONDIÇÃO)
+
+
+LOOP
+	EXIT WHEN()
+END LOOP
+
+
+POTENCIAÇÃO
+
+CREATE OR REPLACE FUNCTION POTENCIA (B INT, E INT) RETURNS INT AS
+$$
+DECLARE
+	R INT;
+	I INT;
+BEGIN
+	R:=1;
+	I:=1;
+	WHILE(i<=e) LOOP
+		r:=r*b;
+		i:=i+1;
+	END LOOP;
+	return r;
+end;
+$$
+LANGUAGE 'PLPGSQL';
