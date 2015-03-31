@@ -156,3 +156,61 @@ CREATE OR REPLACE FUNCTION emp_stamp() RETURNS trigger AS $emp_stamp$
         RETURN NEW;
     END;
 $emp_stamp$ LANGUAGE plpgsql;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ANOTAÇÕES 2015-1
+------------------------------------------------------------
+
+RAISE NOTICE 'mensagem % %', a,b;
+raise exception
+
+
+
+
+CREATE OR REPLACE FUNCTION HW() RETURNS VOID AS $HW$
+BEGIN
+	RAISE NOTICE 'Olá Mundo';
+END;
+$HW$ LANGUAGE plpgsql;
+
+
+
+CREATE OR REPLACE FUNCTION HW(STR VARCHAR) RETURNS VOID AS $HW$
+BEGIN
+	RAISE NOTICE '%',STR;
+END;
+$HW$ LANGUAGE plpgsql;
+
+
+
+CREATE OR REPLACE FUNCTION MYSUM(A INT, B INT) RETURNS INT AS $HW$
+BEGIN
+	RETURN A+B;
+END;
+$HW$ LANGUAGE plpgsql;
+
+
+CREATE OR REPLACE FUNCTION FAT(N INTEGER) RETURNS INT AS $FAT$
+DECLARE
+	F INTEGER := 1;
+	I INTEGER;
+BEGIN
+	FOR I IN 2..N LOOP
+		F:= F*I;
+	END LOOP;
+	RETURN F;
+END;
+$FAT$ LANGUAGE plpgsql;
+
