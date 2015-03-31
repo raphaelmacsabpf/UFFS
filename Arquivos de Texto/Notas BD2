@@ -219,3 +219,12 @@ DECLARAÇÃO DE VARIAVEIS EM TIPO DE TABELA
 
 c cliente.catalogo%type;
 tcliente cliente%rowtype;
+
+
+
+Triggers
+
+CREATE OR REPALCE TRIGGER nome_da_trigger
+[BEFORE|AFTER] INSERT OR UPDATE OR DELETE
+ON nome_da_tabela
+FOR [STATEMENT| EACH ROW] EXECUTE funcao_da_trigger();
