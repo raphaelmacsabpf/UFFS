@@ -214,3 +214,8 @@ BEGIN
 END;
 $FAT$ LANGUAGE plpgsql;
 
+
+DECLARAÇÃO DE VARIAVEIS EM TIPO DE TABELA
+
+c cliente.catalogo%type;
+tcliente cliente%rowtype;
