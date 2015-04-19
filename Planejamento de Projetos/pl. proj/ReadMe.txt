@@ -1,0 +1,1 @@
+Todas as tarefas estão em imagens. O script pode ser vizualizado com qualquer ferramenta de vizualização de texto.

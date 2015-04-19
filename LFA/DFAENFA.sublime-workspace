@@ -1,0 +1,704 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"EE_ApartmentInfo",
+				"EE_ApartmentInfo_type"
+			],
+			[
+				"COLOR_LI",
+				"COLOR_LIGHTBLUE"
+			],
+			[
+				"bizz",
+				"bizzID"
+			],
+			[
+				"SendClient",
+				"SendClientMessage"
+			],
+			[
+				"G_Steal",
+				"G_Steal_BizzID"
+			],
+			[
+				"G_S",
+				"G_Steal_BizzID"
+			],
+			[
+				"G_Ste",
+				"G_Steal_Objects"
+			],
+			[
+				"GetOrg",
+				"GetOrgName"
+			],
+			[
+				"EE_vehicLEREQUEST",
+				"EE_VehicleRequest_realVehicleID"
+			],
+			[
+				"EE_vEHIC",
+				"EE_VehicleRequest_inUse"
+			],
+			[
+				"TryDe",
+				"TryDeletePlayerVehicle"
+			],
+			[
+				"G_vEHICLE",
+				"G_VehicleStoreRebuilding"
+			],
+			[
+				"MAX_STO",
+				"MAX_VEHICLE_STORES"
+			],
+			[
+				"varint",
+				"varint2"
+			],
+			[
+				"Play",
+				"PlayerInfo"
+			],
+			[
+				"SV_sH",
+				"SV_ShowPlayerVehicleStore"
+			],
+			[
+				"SV_",
+				"SV_ShowPlayerVehicleStore"
+			],
+			[
+				"var",
+				"varint2"
+			],
+			[
+				"EE_Vehic",
+				"EE_VehicleRequest_realVehicleID"
+			],
+			[
+				"EE_Vehi",
+				"EE_VehicleRequest_realVehicleID"
+			],
+			[
+				"UpdatePlayer",
+				"UpdatePlayerVehicleInfo"
+			],
+			[
+				"plate",
+				"plateMessage"
+			],
+			[
+				"COLOR_",
+				"COLOR_LIGHTBLUE"
+			],
+			[
+				"vehicle",
+				"vehicleid"
+			],
+			[
+				"G_Ve",
+				"G_VehicleRequest"
+			],
+			[
+				"EE_apart",
+				"EE_ApartmentInfo_key"
+			],
+			[
+				"EE_Ve",
+				"EE_VehicleRequest_inUse"
+			],
+			[
+				"sv_",
+				"SV_LoadPlayerVehicle"
+			],
+			[
+				"Vehicle",
+				"VehicleRequest_SelectedID"
+			],
+			[
+				"DIALOG",
+				"DIALOG_STYLE_LIST"
+			],
+			[
+				"COLOR_YEW",
+				"COLOR_YELLOW2"
+			],
+			[
+				"EE_apar",
+				"EE_ApartmentInfo_inUse"
+			],
+			[
+				"EE_A",
+				"EE_ApartmentInfo_posX"
+			],
+			[
+				"EE_Apa",
+				"EE_ApartmentInfo_owner"
+			],
+			[
+				"G_Apart",
+				"G_ApartmentInfo"
+			],
+			[
+				"EE_Ap",
+				"EE_ApartmentInfo_forSale"
+			],
+			[
+				"G_",
+				"G_ApartmentInfo"
+			],
+			[
+				"EE_Apar",
+				"EE_ApartmentInfo_key"
+			],
+			[
+				"Apartment_",
+				"Apartament_TryKey"
+			],
+			[
+				"Build",
+				"BuildDialog"
+			],
+			[
+				"GameTe",
+				"GameTextForPlayer"
+			],
+			[
+				"EE_aPART",
+				"EE_ApartmentInfo_key"
+			],
+			[
+				"G_Apar",
+				"G_ApartmentInfo"
+			],
+			[
+				"G_A",
+				"G_ApartmentInfo"
+			],
+			[
+				"EE_",
+				"EE_ApartmentInfo_posX"
+			],
+			[
+				"G_Apartm",
+				"G_ApartmentPlayerID"
+			],
+			[
+				"posX",
+				"EE_ApartmentInfo_posX"
+			],
+			[
+				"COLOR_YE",
+				"COLOR_YELLOW"
+			],
+			[
+				"SendClientM",
+				"SendClientMessage"
+			],
+			[
+				"EE_g",
+				"EE_GeneralOrgInfo_leaderName"
+			],
+			[
+				"EE_Gene",
+				"EE_GeneralOrgInfo_leaderName"
+			],
+			[
+				"conn",
+				"connection"
+			],
+			[
+				"GetTab",
+				"GetTabByNumber"
+			],
+			[
+				"GetTAb",
+				"GetTabByNumber"
+			],
+			[
+				"MAX_ORGS",
+				"MAX_ORGS_PER_PAGE"
+			],
+			[
+				"COLOR_LIG",
+				"COLOR_LIGHTBLUE"
+			],
+			[
+				"Real",
+				"RealPlayerID"
+			],
+			[
+				"CMD",
+				"CMDERROR"
+			],
+			[
+				"SendClientMessa",
+				"SendClientMessageToAll"
+			],
+			[
+				"G_Steal_",
+				"G_Steal_SpecialStatus"
+			],
+			[
+				"isPla",
+				"IsPlayerConnected2"
+			],
+			[
+				"connect",
+				"connectionThread"
+			],
+			[
+				"COLOR_LIGHT",
+				"COLOR_LIGHTBLUE"
+			],
+			[
+				"DIALOG_STY",
+				"DIALOG_STYLE_INPUT"
+			],
+			[
+				"g_",
+				"G_Steal_BizzVector"
+			],
+			[
+				"Bizz",
+				"BizzID"
+			],
+			[
+				"EE_steal",
+				"EE_stealValueTotal"
+			],
+			[
+				"G_stea",
+				"G_Steal_BizzVector"
+			],
+			[
+				"boo",
+				"bool"
+			],
+			[
+				"GetPlayerHeal",
+				"GetPlayerHealth"
+			],
+			[
+				"GetDista",
+				"GetDistanceBetweenPlayers"
+			],
+			[
+				"GetPlayerHealth",
+				"GetPlayerHealthBPF"
+			],
+			[
+				"Multipli",
+				"Roubo_GetMultiplier"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "DFA e NFA/main.c",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/User/pawn.sublime-build",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Raphael/Downloads/Links.txt",
+		"/C/Users/Raphael/Documents/GitHub/UFFS/Planejamento de Projetos/pl. proj/ReadMe.txt",
+		"/C/Users/Raphael/Documents/GitHub/BPF/mysql_log.txt",
+		"/C/Users/Raphael/Documents/GitHub/BPF/scriptfiles/carros.cfg",
+		"/C/Users/Raphael/Documents/GitHub/BPF/server.cfg",
+		"/C/Users/Raphael/Documents/GitHub/BPF/gamemodes/Outros Arquivos/TempFile.pwn",
+		"/C/Users/Raphael/Documents/BPFTemp/gamemodes-c4d35b48ea9ccc4cd96d2bf10bbd7372d2320f55/BPF.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/gamemodes/BPF.pwn",
+		"/C/Users/Raphael/Documents/BPFTemp/gamemodes-c4d35b48ea9ccc4cd96d2bf10bbd7372d2320f55/OnPlayerCommandText.pwn",
+		"/C/Users/Raphael/AppData/Local/Temp/Rar$DIa0.721/BPF.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/gamemodes/OnPlayerCommandText.pwn",
+		"/C/Users/Raphael/Documents/BPFTemp/gamemodes-c4d35b48ea9ccc4cd96d2bf10bbd7372d2320f55/GlobalVars.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/filterscripts/Elevator.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/filterscripts/elevator(ORIGINAL).pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/gamemodes/Outros Arquivos/SAMP 0.3e Server/scriptfiles/TD_pb.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/gamemodes/Outros Arquivos/SAMP 0.3e Server/scriptfiles/MAXIMO.pwn.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/gamemodes/Outros Arquivos/SAMP 0.3e Server/scriptfiles/ZERADO.pwn.pwn",
+		"/C/Users/Raphael/AppData/Local/Temp/Rar$DIa0.775/server.cfg",
+		"/C/Users/Raphael/Documents/GitHub/BPF/filterscripts/TextDraw.pwn",
+		"/C/Users/Raphael/Downloads/PWmemorial.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/filterscripts/aimbottest",
+		"/C/Users/Raphael/Documents/GitHub/BPF/gamemodes/ItemActions.pwn",
+		"/C/Users/Raphael/AppData/Local/Temp/Rar$DIa0.359/new.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/pawno/new.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/filterscripts/antiaim.pwn",
+		"/C/Users/Raphael/Desktop/samp037_svr_RC1_win32/server.cfg",
+		"/C/Users/Raphael/Documents/GTA San Andreas User Files/SAMP/sa-mp.cfg",
+		"/C/Users/Raphael/Documents/GitHub/BPF/gamemodes/.gitignore",
+		"/C/Users/Raphael/Documents/GitHub/Paineis/sistemaadm/footer.php",
+		"/C/Users/Raphael/Documents/GitHub/Paineis/sistemaadm/perfil.php",
+		"/C/Users/Raphael/Documents/GitHub/BPF/gamemodes/Forwards.pwn",
+		"/C/Users/Raphael/AppData/Local/Temp/Rar$DIa0.207/BPG.pwn",
+		"/C/Users/Raphael/AppData/Local/Temp/Rar$DIa0.594/Org1.cfg",
+		"/C/Users/Raphael/AppData/Local/Temp/Rar$DIa0.443/server.cfg",
+		"/C/Users/Raphael/Documents/BPFTemp/gamemodes-c4d35b48ea9ccc4cd96d2bf10bbd7372d2320f55/MySQL.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/gamemodes/Macros.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/gamemodes/macros.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/filterscripts/ARVORE.pwn",
+		"/C/Users/Raphael/AppData/Local/Temp/Rar$DIa0.600/ObjectStreamer.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/filterscripts/NATAL.pwn",
+		"/C/Users/Raphael/Documents/GitHub/BPF/filterscripts/ATC.pwn",
+		"/C/Users/Raphael/AppData/Local/Temp/Rar$DIa0.974/SpikeStrip.pwn",
+		"/C/Users/Raphael/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Raphael/Documents/GitHub/BPF/filterscripts/antisobeit.pwn",
+		"/C/Users/Raphael/AppData/Local/Temp/Rar$DIa0.282/AntSobeit.pwn",
+		"/C/Users/GAMES-PC/Pictures/Criterion Games/(1) Gabriel Roas - Mensagens_files/photo(29).php",
+		"/C/Users/GAMES-PC/Documents/GitHub/BPF/gamemodes/BPF.pwn",
+		"/C/Users/GAMES-PC/Documents/GitHub/BPF/gamemodes/OnPlayerCommandText.pwn",
+		"/C/Users/GAMES-PC/Documents/GitHub/BPF/gamemodes/Enums.pwn",
+		"/C/Users/GAMES-PC/Documents/GitHub/BPF/gamemodes/ItemActions.pwn",
+		"/C/Users/GAMES-PC/Documents/GitHub/BPF/gamemodes/Forwards.pwn",
+		"/C/Users/GAMES-PC/Documents/GitHub/Game-Development/IsometricGame/Assets/CueScript.cs",
+		"/C/Users/GAMES-PC/Documents/GitHub/Game-Development/FPSGame/Assets/FPS.cs",
+		"/C/Users/GAMES-PC/Documents/GitHub/Game-Development/IsometricGame/Assets/GUIScript.cs",
+		"/C/Users/GAMES-PC/Documents/GitHub/Game-Development/FPSGame/Assets/AIController.cs",
+		"/C/Users/GAMES-PC/Documents/GitHub/Game-Development/FPSGame/Assets/MonsterController.cs",
+		"/C/Users/GAMES-PC/Documents/GitHub/Game-Development/IsometricGame/Assets/BallScript.cs",
+		"/C/Users/GAMES-PC/Documents/GitHub/Game-Development/FPSGame/Assets/GUICredits.cs",
+		"/C/Users/GAMES-PC/Documents/GitHub/Game-Development/FPSGame/Assets/GUIScript.cs",
+		"/C/Users/GAMES-PC/Documents/GitHub/Game-Development/FPSGame/Assets/FootstepsEngine.cs",
+		"/C/Users/GAMES-PC/Documents/GitHub/Game-Development/FPSGame/Assets/BulletScript.cs",
+		"/C/Users/GAMES-PC/Desktop/conexao.php",
+		"/C/Users/GAMES-PC/Desktop/seguranca.php",
+		"/C/Program Files (x86)/MTA San Andreas 1.3/server/mods/deathmatch/resources/raphael/raphael.map",
+		"/C/Program Files (x86)/MTA San Andreas 1.3/server/mods/deathmatch/mtaserver.conf",
+		"/C/Users/GAMES-PC/AppData/Local/Temp/Rar$DIa0.454/mme.pwn",
+		"/C/Users/GAMES-PC/AppData/Local/Temp/Rar$DIa0.433/objecteditor.pwn",
+		"/C/Users/GAMES-PC/AppData/Local/Temp/Rar$DIa0.996/objecteditor.pwn",
+		"/C/Users/GAMES-PC/Documents/GitHub/BPF/filterscripts/oe.pwn",
+		"/C/Users/GAMES-PC/Downloads/Sublime.Text.3.Build.3008.Windows.64bit.CracKed.By.Hmily.LCG/Data/Packages/User/Pawn.sublime-completions",
+		"/C/Users/GAMES-PC/Downloads/Sublime.Text.3.Build.3008.Windows.64bit.CracKed.By.Hmily.LCG/Data/Packages/User/Pawn.sublime-settings",
+		"/C/Users/GAMES-PC/Downloads/Sublime.Text.3.Build.3008.Windows.64bit.CracKed.By.Hmily.LCG/Data/Packages/User/Pawn.tmLanguage",
+		"/C/Users/GAMES-PC/Downloads/samp03z_svr_R1_win32/gamemodes/timertest.pwn",
+		"/C/Users/GAMES-PC/Documents/GitHub/BPF/gamemodes/ItemActions.amx",
+		"/C/Users/GAMES-PC/Documents/GitHub/BPF/gamemodes/BPF.sublime-project",
+		"/C/Users/GAMES-PC/Downloads/Sublime.Text.3.Build.3008.Windows.64bit.CracKed.By.Hmily.LCG/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/GAMES-PC/Downloads/Sublime.Text.3.Build.3008.Windows.64bit.CracKed.By.Hmily.LCG/Data/Packages/User/pawn.sublime-build"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"*"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"mapa dos hospit",
+			"mapa de los santos",
+			"Mapa dos Hospitais",
+			"mapa dos hospit",
+			"InfoGPSLS",
+			"EE_ApartmentInfo_text3D",
+			"apartmentinfo_type",
+			"APARTMENT_LIST",
+			"ALUGARCARRO",
+			"MedicCall",
+			"/RETIRAR\"",
+			"@ITM",
+			"new @ITM",
+			"ItemMaxPerPlayer",
+			"itemmaxper",
+			"itemmax",
+			"vnames",
+			"ehicle",
+			"PlayerLocateSelfVehicle",
+			"public",
+			"bl",
+			"Tbl",
+			"tbl",
+			"case 162:",
+			"vender veículo",
+			"RealPlayerID",
+			"PlayerRealID",
+			"UpdatePlayerVehicleInfo",
+			"player_vehicles",
+			"VehicleRequest_TransferID",
+			"envolvido",
+			"transfer",
+			"case 162",
+			"161",
+			"1017",
+			"VehRqt_TableVehID",
+			"table\ntable",
+			"table",
+			"tbl",
+			"VehicleRequest_SelectedID",
+			"VehRqt_TableVehID",
+			"request",
+			"== 167",
+			"1021",
+			"comprar mais veíc",
+			"comprar maisveíc",
+			"comprar mais veíc",
+			"builddialo",
+			"VehicleRequest_SelectedID",
+			"vender veículo",
+			"store",
+			"vehiclestore",
+			"ShowPlayerVehicleStore",
+			"store",
+			"1795.9058,-1296.2750,13.4031",
+			"ShowPlayerVehicleList",
+			"entrances",
+			"Tanquefarc",
+			"tanque ",
+			"pontosfarc",
+			"farc",
+			"comprar um vip",
+			"comprar vip",
+			"darbene",
+			"vipativo",
+			"darbene",
+			"boxes",
+			"pconnecttime",
+			"connecttime",
+			"connectedtime",
+			"DeleteVehicleStore",
+			"AnnounceItemForPlayer",
+			"error",
+			"connectionth",
+			"connectionThre",
+			"settimer",
+			"cleanparkvac",
+			"settimer",
+			"connectionth",
+			"giveplayeritem(",
+			"openbox",
+			"playeritem",
+			"box_item",
+			"query exe",
+			"query (thre",
+			"box_item",
+			"1025",
+			"1026",
+			"box_i",
+			"announce",
+			"error",
+			"box_it",
+			"GetNameOfItemInventory",
+			"ativ",
+			"case 1",
+			"case 0",
+			"case 0, ",
+			"Fillup",
+			"refuelwait",
+			"ref",
+			"RunOutTime",
+			"runout",
+			"WantedLevel[",
+			"WantedLevel",
+			"procurado",
+			"stealrate",
+			"CountDownDisable",
+			"countdowndisabl",
+			"countdown",
+			"disablecou",
+			"disable",
+			"StealSuccess",
+			"StealFinish",
+			"StealNoSuccess",
+			"StealSuccess",
+			"StealNoSuccess",
+			"StealSurrender",
+			"G_Steal_Dirty",
+			"CallPolice",
+			"alarm",
+			"se esconda",
+			"processarmorte(",
+			"onplayerdeat",
+			"processarmorte(",
+			"você matou",
+			"steal_bizzid",
+			"G_Steal_In",
+			"stealobj"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Outros Lugares",
+			"GetMoneyStr",
+			"ProgressBarTD0",
+			"ProgressBarTD1",
+			"ProgressBarPB0",
+			"playerid",
+			"leaderid",
+			"playerid",
+			"SetPlayerColorBPF",
+			"IsPlayerConnected2(",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "DFA e NFA/main.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 121.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "DFAENFA.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 75.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

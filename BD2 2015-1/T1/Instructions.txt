@@ -1,0 +1,5 @@
+Compilar usando GCC para linux, utilizando o comando:
+gcc *.c -o NOME_DO_PROGRAMA
+
+Caso o nome do programa seja bd2 utilize o seguinte comando
+gcc *.c -o bd2

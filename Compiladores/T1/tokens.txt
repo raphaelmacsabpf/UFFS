@@ -1,0 +1,64 @@
+
+---------------------Token Table---------------------
+
+
+               Token |                 Type |       Line |     Column
+
+                 int |                 Type |          3 |          3
+                main |             Function |          3 |          8
+                argn |                  Var |          3 |         13
+                 int |                 Type |          4 |          4
+                   a |                  Var |          4 |          6
+                   = |             Operator |          4 |          7
+                   2 |              Literal |          4 |         10
+                 int |                 Type |          5 |          4
+                   b |                  Var |          5 |          6
+                   = |             Operator |          5 |          7
+                   3 |              Literal |          5 |         10
+                   b |                  Var |          6 |          2
+                  ++ |             Operator |          6 |          3
+                 int |                 Type |          7 |          4
+                   c |                  Var |          7 |          6
+                char |                 Type |          8 |          5
+                test |                  Var |          8 |         10
+                 int |                 Type |          9 |          4
+                   i |                  Var |          9 |          6
+                 for |        Reserved Word |         11 |          4
+                   i |                  Var |         11 |          6
+                   = |             Operator |         11 |          7
+                   0 |              Literal |         11 |         10
+                   i |                  Var |         11 |         13
+                   < |             Operator |         11 |         14
+                  10 |              Literal |         11 |         18
+                   i |                  Var |         11 |         21
+                  ++ |             Operator |         11 |         22
+                  if |        Reserved Word |         12 |          4
+                   i |                  Var |         12 |          6
+                  == |             Operator |         12 |          7
+                   9 |              Literal |         12 |         11
+              printf |             Function |         13 |          9
+                OIEE |              Literal |         13 |         15
+                   c |                  Var |         16 |          2
+                   = |             Operator |         16 |          3
+                   a |                  Var |         16 |          6
+                   + |             Operator |         16 |          7
+                   b |                  Var |         16 |         10
+                   c |                  Var |         17 |          2
+                   = |             Operator |         17 |          3
+              funcao |             Function |         17 |         11
+                   a |                  Var |         17 |         13
+                   b |                  Var |         17 |         15
+                   c |                  Var |         17 |         17
+               Tipo0 |              Literal |         17 |         24
+                 int |                 Type |         18 |          4
+                   d |                  Var |         18 |          6
+                   = |             Operator |         18 |          7
+                   c |                  Var |         18 |         10
+                   + |             Operator |         18 |         11
+                   1 |              Literal |         18 |         14
+              printf |             Function |         19 |          7
+                %d\n |              Literal |         19 |         13
+                   , |            Separator |         19 |         14
+                   d |                  Var |         19 |         17
+              return |        Reserved Word |         20 |          7
+                   1 |              Literal |         20 |          9

@@ -1,0 +1,3 @@
+Trabalho feito por Raphael Machado dos Santos
+Para fazer analize léxica neste trabalho, descreva o arquivo que você quer analizar na linha 103 do arquivo main.c
+As saídas de tabela de símbolos e tabela de tokens se dá em arquivos .txt

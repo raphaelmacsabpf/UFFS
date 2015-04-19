@@ -1,0 +1,16 @@
+
+---------------------Symbol Table---------------------
+
+
+              Symbol |                 Type
+
+                main |             Function
+                argn |                  Var
+                   a |                  Var
+                   b |                  Var
+                   c |                  Var
+                test |                  Var
+                   i |                  Var
+              printf |             Function
+              funcao |             Function
+                   d |                  Var
